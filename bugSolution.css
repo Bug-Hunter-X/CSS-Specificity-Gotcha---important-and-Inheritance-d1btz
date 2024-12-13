@@ -1,0 +1,17 @@
+The solution focuses on avoiding the `!important` flag altogether:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.parent .child {
+  color: green;
+}
+```
+
+By removing the `!important` declaration and relying on the natural specificity of the `.parent .child` selector, the styles are applied predictably. This approach improves maintainability and makes the stylesheet easier to understand and debug.  If the `!important` declaration truly cannot be avoided, comment thoroughly to explain the reason why.
