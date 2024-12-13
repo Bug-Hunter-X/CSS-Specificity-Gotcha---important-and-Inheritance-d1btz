@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors and inheritance:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red !important;
+}
+
+.parent .child {
+  color: green;
+}
+```
+
+In this example, applying `.parent .child { color: green; }` would override `.child { color: red !important; }` due to higher specificity. However, the `!important` declaration can lead to unexpected behavior. The `!important` rule helps to increase the specificity of a CSS declaration, but overusing it can lead to difficulties in maintaining CSS stylesheets and unexpected results.
